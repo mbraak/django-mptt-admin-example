@@ -1,0 +1,15 @@
+target-version = "py310"
+line-length = 88
+extend-exclude = ["*/migrations/*", "*.md"]
+
+[lint]
+select = ["E", "F", "I", "UP", "B", "DJ", "RUF"]
+# Django Meta / ModelAdmin class attributes are mutable by convention.
+ignore = ["RUF012"]
+
+[lint.isort]
+known-first-party = ["catalog", "config"]
+
+[lint.per-file-ignores]
+# Django's generated settings contain a validator path that can't be wrapped.
+"config/settings.py" = ["E501"]
