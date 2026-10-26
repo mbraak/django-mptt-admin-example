@@ -16,9 +16,11 @@ python manage.py seed_catalog      # demo tree, products and an admin user
 python manage.py runserver
 ```
 
-Then open <http://127.0.0.1:8000/admin/> and log in with `admin` / `admin`.
+Then open <http://127.0.0.1:8000/> and follow the link to the category tree in the admin.
+While `DEBUG` is on you are logged in automatically as `admin` (see
+`catalog/middleware.py`); with `DEBUG` off, log in with `admin` / `admin`.
 
-Go to **Catalog › Categories** to see the tree. You can:
+In the tree you can:
 
 - drag nodes to reorder them or move them under another parent
 - right-click a node for a context menu (add child, edit, delete)

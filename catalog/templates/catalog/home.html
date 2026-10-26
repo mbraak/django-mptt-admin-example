@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>django-mptt-admin example</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 4rem auto; padding: 0 1rem; line-height: 1.5; color: #222; }
+    h1 { margin-bottom: 0.25rem; }
+    .subtitle { color: #666; margin-top: 0; }
+    .button { display: inline-block; padding: 0.6rem 1.2rem; background: #417690; color: #fff; text-decoration: none; border-radius: 4px; }
+    .button:hover { background: #205067; }
+    code { background: #f2f2f2; padding: 0.1rem 0.3rem; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>django-mptt-admin example</h1>
+  <p class="subtitle">A drag-and-drop tree interface in the Django admin for django-mptt models.</p>
+
+  <p><a class="button" href="{% url 'admin:catalog_category_changelist' %}">Open the category tree</a></p>
+
+  <p>
+    You are logged in automatically as <code>admin</code> while <code>DEBUG</code> is on.
+    Otherwise, log in with username <code>admin</code> and password <code>admin</code>.
+  </p>
+
+  <p>
+    The rest of the admin is at <a href="{% url 'admin:index' %}">/admin/</a>.
+    If the admin asks you to log in, run <code>python manage.py seed_catalog</code> first.
+  </p>
+</body>
+</html>
