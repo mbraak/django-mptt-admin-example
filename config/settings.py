@@ -52,6 +52,13 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+if DEBUG:
+    # Skip the admin login for the demo: every visitor is logged in as `admin`
+    MIDDLEWARE.insert(
+        MIDDLEWARE.index("django.contrib.auth.middleware.AuthenticationMiddleware") + 1,
+        "catalog.middleware.AutoLoginMiddleware",
+    )
+
 ROOT_URLCONF = "config.urls"
 
 TEMPLATES = [
