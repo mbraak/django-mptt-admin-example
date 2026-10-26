@@ -13,7 +13,6 @@ class CategoryAdmin(DjangoMpttAdmin):
 
     # Open the first level on load; load deeper levels lazily via AJAX.
     tree_auto_open = 0
-    tree_load_on_demand = 1
 
     # Right-click context menu on nodes (add child, edit, delete).
     use_context_menu = True
